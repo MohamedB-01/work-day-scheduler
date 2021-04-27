@@ -21,3 +21,6 @@ function to display current time.
 loope around timeblocks to set background color according to past, present and future status.
 function to grab saved input from local storage.
 function to save input to local storage.
+
+## Link to app. 
+https://mohamedb-01.github.io/work-day-scheduler/
