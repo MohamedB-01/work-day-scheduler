@@ -4,20 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--link bootstrap-->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
+    <!--link fontawesome-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <!--link google fonts family-->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!--link stylesheet-->
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -30,14 +34,19 @@
     </header>
     <div class="container-fluid ">
       <!-- Timeblocks go here -->
-      <div class="timeblock form-group container-fluid d-flex justify-content-start" >
+      <!-- one container for each timeblock -->
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h9">
+        <!--span for timeblock hour lable -->
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="09:00">9:00am</time></span>
+        <!--text area to enter schedule-->
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <!--button to save input-->
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
           Save
         </button>
       </div>
-      <div class="timeblock form-group container-fluid d-flex justify-content-start">
+      <!--repeat blocks for 9-5 timeblocks -->
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h10">
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="10:00">10:00am</time></span>
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -45,7 +54,7 @@
         </button>
       </div>
 
-      <div class="timeblock form-group container-fluid d-flex justify-content-start">
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h11">
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="11:00">11:00am</time></span>
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -53,7 +62,7 @@
         </button>
       </div>
 
-      <div class="timeblock form-group container-fluid d-flex justify-content-start">
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h12"> 
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="12:00">12:00pm</time></span>
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -61,7 +70,7 @@
         </button>
       </div>
 
-      <div class="timeblock form-group container-fluid d-flex justify-content-start">
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h13">
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="13">01:00pm</time></span>
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -69,7 +78,7 @@
         </button>
       </div>
 
-      <div class="timeblock form-group container-fluid d-flex justify-content-start">
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h14">
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="14:00">02:00pm</time></span>
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -77,7 +86,7 @@
         </button>
       </div>
 
-      <div class="timeblock form-group container-fluid d-flex justify-content-start">
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h15">
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="15:00">03:00pm</time></span>
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -85,7 +94,7 @@
         </button>
       </div>
 
-      <div class="timeblock form-group container-fluid d-flex justify-content-start">
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h16">
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="16:00">04:00pm</time></span>
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -93,7 +102,7 @@
         </button>
       </div>
 
-      <div class="timeblock form-group container-fluid d-flex justify-content-start">
+      <div class="timeblock form-group container-fluid d-flex justify-content-start" id="h17">
         <span class="hour-lable input-group-text col-1"><time class="time" datetime="17:00">05:00pm</time></span>
         <textarea class="form-control col-10" id="exampleFormControlTextarea1" rows="3"></textarea>
         <button type="button" class="btn btn-primary col-1" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -102,7 +111,7 @@
       </div>
       
     </div>
-
+<!--link jquery and moment.js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
