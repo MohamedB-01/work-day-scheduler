@@ -41,4 +41,16 @@ $(document).ready(function () {
       localStorage.setItem(time , text);
   })
 
-})
+});
+
+
+ function onLoad (){
+  textEl.forEach( () =>{
+    var time = $(this).parent().attr("id");
+    $(".form-control").val(localStorage.getItem(time));
+  }
+  );
+  
+ };
+
+ onLoad ();
