@@ -7,6 +7,7 @@ var textEl = document.querySelectorAll(".form-control");
 
 var saveBtn = document.querySelectorAll(".btn")
 
+
 // function to display current time. 
 function displayTime() {
   var rightNow = moment().format('dddd MMM DD, YYYY [at] hh:mm:ss a');
@@ -28,37 +29,16 @@ for (var i = 0; i < timeBlockArr.length; i++) {
   };
 };
 
-// function to grab saved input from local storage 
-function init() {
 
-    
+$(document).ready(function () {
+  // saveBtn click listener 
+  $(".btn").on("click", function () {
+      // Get nearby values of the description in JQuery
+      var text = $(this).siblings(".form-control").val();
+      var time = $(this).parent().attr("id");
 
-  timeBlockArr.each(function () {
-      var savedValue = $(this).attr("id");
-      var savedText = localStorage.getItem(savedValue);
+      // Save text in local storage
+      localStorage.setItem(time , text);
+  })
 
-      if  (savedText !== null) {
-          $(this).children("savedText").val (savedText);
-          savedText.text() = savedText;
-      };
-  });
-};
-
-  
-//function to save input to local storage 
-for (var i; i < saveBtn.length; i++) {
-  saveBtn[i].on("click", function (event) {
-    event.preventDefault();
-    
-    var textInput = $(this).siblings(".form-control").val();
-
-    localStorage.setItem(textInput);
-    textInput.text() = textInput
-  } );
-};
-  
-
-
-
-init();
-
+})
