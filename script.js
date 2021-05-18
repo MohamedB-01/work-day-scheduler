@@ -3,7 +3,7 @@ var timeDisplayEl = $('#currentDay');
 var currentHour = moment().format('H');
 var timeBlockArr = $(".timeblock");
 
-var textEl = document.querySelectorAll(".form-control");
+var textEl = document.querySelectorAll(".text-area");
 
 var saveBtn = document.querySelectorAll(".btn")
 
@@ -34,23 +34,44 @@ $(document).ready(function () {
   // saveBtn click listener 
   $(".btn").on("click", function () {
       // Get nearby values of the description in JQuery
-      var text = $(this).siblings(".form-control").val();
+      var text = $(this).siblings(".text-area").val();
       var time = $(this).parent().attr("id");
-
-      // Save text in local storage
-      localStorage.setItem(time , text);
+    
+      localStorage.setItem(time, JSON.stringify(text));
   })
 
 });
 
 
- function onLoad (){
-  textEl.forEach( () =>{
+$(document).ready(function () {
+  textEl.forEach( function () {
+    console.log(localStorage);
     var time = $(this).parent().attr("id");
-    $(".form-control").val(localStorage.getItem(time));
-  }
-  );
-  
- };
+    console.log(time);
+    var calNotes = localStorage.getItem(time);
+    console.log(calNotes);
+     //var time = $(this).parent().attr("id");
+    // console.log(time);
+    // console.log(localStorage);
+    // console.log(localStorage.getItem(time));
+    // //var storedText = localStorage.getItem(time);
+    //document.querySelectorAll(".text-area").innerHTML = localStorage.getItem(time);
+   // console.log(storedText);
+    // textVal = $(`.text-area`).val(storedText);
+    // textEl.textcontent = textVal
+  });
+});
 
- onLoad ();
+
+// $(document).ready(function () {
+//   textEl.forEach( function () {
+//     var time = $(this).parent().attr("id");
+//     console.log(time);
+//     var storedText = localStorage.getItem(time);
+//     console.log(storedText);
+//     textVal = $(`.text-area`).val(storedText);
+//     textEl.textcontent = textVal
+//   }
+//   );
+  
+// });
