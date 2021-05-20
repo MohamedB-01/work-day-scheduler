@@ -21,11 +21,11 @@ for (var i = 0; i < timeBlockArr.length; i++) {
   var blockHour = i + 9
   
   if (blockHour > currentHour){
-    $(textEl[i]).addClass("bg-warning");
-  } else if (blockHour == currentHour) {
-    $(textEl[i]).addClass("bg-danger");
-  } else {
     $(textEl[i]).addClass("bg-success");
+  } else if (blockHour == currentHour) {
+    $(textEl[i]).addClass("bg-warning");
+  } else {
+    $(textEl[i]).addClass("bg-danger");
   };
 };
 
@@ -42,36 +42,14 @@ $(document).ready(function () {
 
 });
 
-
+//function to render local storage values into text area 
 $(document).ready(function () {
-  textEl.forEach( function () {
-    console.log(localStorage);
+  $(".text-area").each( function () {
     var time = $(this).parent().attr("id");
-    console.log(time);
     var calNotes = localStorage.getItem(time);
-    console.log(calNotes);
-     //var time = $(this).parent().attr("id");
-    // console.log(time);
-    // console.log(localStorage);
-    // console.log(localStorage.getItem(time));
-    // //var storedText = localStorage.getItem(time);
-    //document.querySelectorAll(".text-area").innerHTML = localStorage.getItem(time);
-   // console.log(storedText);
-    // textVal = $(`.text-area`).val(storedText);
-    // textEl.textcontent = textVal
+    $(this).val(calNotes);
+   
   });
 });
 
 
-// $(document).ready(function () {
-//   textEl.forEach( function () {
-//     var time = $(this).parent().attr("id");
-//     console.log(time);
-//     var storedText = localStorage.getItem(time);
-//     console.log(storedText);
-//     textVal = $(`.text-area`).val(storedText);
-//     textEl.textcontent = textVal
-//   }
-//   );
-  
-// });
